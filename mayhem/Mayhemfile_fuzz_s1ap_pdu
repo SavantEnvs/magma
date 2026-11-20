@@ -1,0 +1,9 @@
+project: savantenvs/magma
+target: fuzz-s1ap-pdu
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-s1ap-pdu/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_s1ap_pdu
+    libfuzzer: true
+    timeout: 10

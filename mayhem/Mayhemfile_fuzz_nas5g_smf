@@ -1,0 +1,9 @@
+project: savantenvs/magma
+target: fuzz-nas5g-smf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-nas5g-smf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_nas5g_smf
+    libfuzzer: true
+    timeout: 10

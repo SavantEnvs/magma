@@ -1,0 +1,9 @@
+project: savantenvs/magma
+target: fuzz-nas-message
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-nas-message/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_nas_message
+    libfuzzer: true
+    timeout: 10

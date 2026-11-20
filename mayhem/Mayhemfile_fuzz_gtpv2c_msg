@@ -1,0 +1,10 @@
+project: savantenvs/magma
+target: fuzz-gtpv2c-msg
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-gtpv2c-msg/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gtpv2c_msg
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz-gtpv2c-msg/fuzz-gtpv2c-msg.dict
+    timeout: 10
